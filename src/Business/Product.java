@@ -11,5 +11,42 @@ package Business;
  * @author zhaojiyuan
  */
 public class Product {
-    private string 
+    private String productName;
+    private String productPrice;
+    private int productAvailability;
+    private String productDescription;
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(String productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public int getProductAvailability() {
+        return productAvailability;
+    }
+
+    public void setProductAvailability(int productAvailability) {
+        this.productAvailability = productAvailability;
+    }
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+    
+    
 }
