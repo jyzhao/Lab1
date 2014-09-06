@@ -7,6 +7,7 @@
 package UserInterface;
 
 import Business.Product;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -147,6 +148,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         product.setProductPrice(productPrice);
         product.setProductName(productName);
         
+        JOptionPane.showMessageDialog(null, "Product Created Successfully" + product);
     }//GEN-LAST:event_createProductJButtonActionPerformed
 
 
