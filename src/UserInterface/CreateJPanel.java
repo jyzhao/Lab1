@@ -6,6 +6,8 @@
 
 package UserInterface;
 
+import Business.Product;
+
 /**
  *
  * @author zhaojiyuan
@@ -15,8 +17,11 @@ public class CreateJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreatePanel
      */
-    public CreateJPanel() {
+    private Product product;
+    
+    public CreateJPanel(Product product) {
         initComponents();
+        this.product = product;
     }
 
     /**
@@ -28,19 +33,134 @@ public class CreateJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        productNameJTextField = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        productDescriptionJTextArea = new javax.swing.JTextArea();
+        productPriceJTextField = new javax.swing.JTextField();
+        productAvailabilityJTextField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        createProductJButton = new javax.swing.JButton();
+
+        jLabel1.setText("Product Name");
+
+        jLabel2.setText("Product Description");
+
+        jLabel3.setText("Product Price");
+
+        jLabel4.setText("Product Availability");
+
+        productNameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productNameJTextFieldActionPerformed(evt);
+            }
+        });
+
+        productDescriptionJTextArea.setColumns(20);
+        productDescriptionJTextArea.setRows(5);
+        jScrollPane1.setViewportView(productDescriptionJTextArea);
+
+        jLabel5.setText("Create Product Screen");
+
+        createProductJButton.setText("Create Product");
+        createProductJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createProductJButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(197, 197, 197)
+                        .addComponent(productNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(170, 170, 170)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(productPriceJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                            .addComponent(productAvailabilityJTextField)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(98, 98, 98)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(createProductJButton))))
+                .addContainerGap(206, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(jLabel1)
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel2)
+                        .addGap(46, 46, 46))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(productNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(productPriceJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(productAvailabilityJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78)
+                .addComponent(createProductJButton)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void productNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productNameJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productNameJTextFieldActionPerformed
+
+    private void createProductJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createProductJButtonActionPerformed
+        // TODO add your handling code here:
+        String productName = productNameJTextField.getText();
+        String productDescription = productDescriptionJTextArea.getText();
+        String productAvailability = productAvailabilityJTextField.getText();
+        String productPrice = productPriceJTextField.getText();
+        
+        product.setProductAvailability(Integer.parseInt(productAvailability));
+        product.setProductDescription(productDescription);
+        product.setProductPrice(productPrice);
+        product.setProductName(productName);
+        
+    }//GEN-LAST:event_createProductJButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton createProductJButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField productAvailabilityJTextField;
+    private javax.swing.JTextArea productDescriptionJTextArea;
+    private javax.swing.JTextField productNameJTextField;
+    private javax.swing.JTextField productPriceJTextField;
     // End of variables declaration//GEN-END:variables
 }
